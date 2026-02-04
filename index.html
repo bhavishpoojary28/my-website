@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- PARTICLE CANVAS (FIRST LAYER) -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- LOGO -->
+<img 
+  src="images/bh.jpeg" 
+  alt="Logo" 
+  class="logo"
+  onclick="openLogo()"
+/>
+
+<!-- LOGO MODAL -->
+<div id="logo-modal" class="logo-modal" onclick="closeLogo()">
+  <img src="images/bh.jpeg" class="logo-big">
+</div>
+
+<header>
+  <h1>Welcome </h1>
+  <p>Select a project to open</p>
+</header>
+
+<!-- MAIN CARDS -->
+<main id="main-cards" class="grid">
+
+
+  <div class="card" onclick="showPortfolio()">
+  <h2>Portfolio</h2>
+  <p>Personal portfolio website</p>
+</div>
+
+  <div class="card" onclick="showGameProjects()">
+    <h2>Game</h2>
+    <p>HTML / JS game projects</p>
+  </div>
+
+  <div class="card" onclick="showCollegeProjects()">
+    <h2>College Project</h2>
+    <p> projects</p>
+  </div>
+
+
+
+
+</main>
+
+
+<!-- PROJECT LIST -->
+ <section id="portfolio-section" class="portfolio hidden">
+
+  <button class="close-btn" onclick="goBackToHome()">✖ Back</button>
+
+  <div class="portfolio-card">
+    <img src="images/bh.jpeg" alt="Bhavish" class="profile-pic">
+
+    <h2>Bhavish Poojary</h2>
+    <p class="role">Frontend Developer • Student • Project Builder</p>
+
+    <p class="about">
+     🔭 A Full-stack Developer who loves turning complex ideas into clean, functional, and secure software.
+I build scalable systems, design modern interfaces, and enjoy bringing ideas to life through Java, Python, JavaScript, and the Scriptjs.
+If it involves problem-solving and creativity — I’m in. 🚀
+    </p>
+
+
+
+
+    <div class="skills">
+      <span>C</span>
+      <span>C++</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>Java</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>GitHub</span>
+      <span>Versel</span>
+      <span>React</span>
+      <span>MongoDB</span>
+      <span>Vite</span>
+      
+  
+    </div>
+  </div>
+
+</section>
+
+<section id="project-list-section" class="college-list hidden">
+  <h3 id="list-title"></h3>
+
+  <button class="close-btn" onclick="goBack()">✖ Back</button>
+
+  <div id="project-items"></div>
+
+</section>
+<!-- LIVE MOVING NOTE -->
+<div class="live-note-wrapper">
+  <div class="live-note">
+    🚀 Note: This website is under continuous development. New features coming soon!
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Bhavish Poojary</p>
+</footer>
+
+<!-- SCRIPT MUST BE LAST -->
+<script src="script.js"></script>
+
+</body>
+</html>
