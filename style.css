@@ -43,18 +43,19 @@ header h1 {
 
 header p {
   color: #cbd5f5;
-  margin-top: 8px;
+  margin-top: 12px;   /* ✅ normal spacing */
 }
+
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 32px;
-  max-width: 960px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 60px auto;
   padding: 0 20px;
+  justify-content: center;
 }
-
 
 
 .card::before {
@@ -75,6 +76,17 @@ header p {
 .card {
   position: relative;
   overflow: hidden;
+  
+  padding: 30px 20px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+  background: transparent;
+  
+
+  transition: 0.3s ease;
+}
+
 }
 
 
@@ -84,8 +96,11 @@ header p {
 
 
 .card:hover {
-  background: #334155;
-  transform: translateY(-5px);
+  
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(99,102,241,0.6);
+}
+
 }
 
 .card h2 {
@@ -99,7 +114,7 @@ header p {
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   font-size: 0.85rem;
   color: #94a3b8;
 }
@@ -232,17 +247,13 @@ footer {
   line-height: 1.6;
   color: #e5e7eb;
 }
-.about::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin: 22px auto 0;
-  background: rgba(255,255,255,0.3);
-  border-radius: 2px;
+
+#list-title {
+  margin-top: 100px;
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
 }
-
-
 
 .skills {
   margin-top: 20px;
@@ -251,7 +262,13 @@ footer {
   justify-content: center;
   gap: 20px;
 }
-
+.tech-title {
+  margin-top: 45px;   /* 🔥 Increased gap above Tech Stack */
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
 .skills span {
   padding: 6px 12px;
   border-radius: 20px;
@@ -290,4 +307,7 @@ footer {
   100% {
     transform: translateX(-150%);
   }
+}
+* {
+  transition: all 0.3s ease;
 }

@@ -16,6 +16,10 @@ const collegeProjects = [
    {
     name: "KSRTC Live Bus Tracking System",
     url: "https://bhavishpoojary28.github.io/Ksrtc-Live-Bus-Tracking-/"
+  },
+   {
+    name: "SweetDelights Cake Website",
+    url: "https://bhavishpoojary28-sweetdelights-cake.vercel.app"
   }
 
 ];
@@ -31,26 +35,37 @@ function showCollegeProjects() {
 }
 
 function showGameProjects() {
+  
   showProjects("🎮 Game Projects", gameProjects);
 }
 
 function showPortfolio() {
   showPortfolio("🎮 Game Projects", gameProjects);
 }
+/* ================= PORTFOLIO ================= */
+
 function showPortfolio() {
-  document.getElementById("main-cards").classList.add("hidden");
-  document.getElementById("project-list-section").classList.add("hidden");
-  document.getElementById("portfolio-section").classList.remove("hidden");
+  document.getElementById("home-header").style.display = "none";
+  document.getElementById("main-cards").style.display = "none";
+  document.getElementById("project-list-section").style.display = "none";
+  document.getElementById("portfolio-section").style.display = "block";
 }
 
 function goBackToHome() {
-  document.getElementById("portfolio-section").classList.add("hidden");
-  document.getElementById("main-cards").classList.remove("hidden");
+  document.getElementById("home-header").style.display = "block";
+  document.getElementById("portfolio-section").style.display = "none";
+  document.getElementById("main-cards").style.display = "grid";
 }
 
+/* ================= PROJECT LIST ================= */
+
 function showProjects(title, projects) {
-  document.getElementById("main-cards").classList.add("hidden");
-  document.getElementById("project-list-section").classList.remove("hidden");
+
+  document.getElementById("home-header").style.display = "none";
+  document.getElementById("main-cards").style.display = "none";
+  document.getElementById("portfolio-section").style.display = "none";
+  document.getElementById("project-list-section").style.display = "block";
+
   document.getElementById("list-title").innerText = title;
 
   const container = document.getElementById("project-items");
@@ -66,8 +81,9 @@ function showProjects(title, projects) {
 }
 
 function goBack() {
-  document.getElementById("project-list-section").classList.add("hidden");
-  document.getElementById("main-cards").classList.remove("hidden");
+  document.getElementById("home-header").style.display = "block";
+  document.getElementById("project-list-section").style.display = "none";
+  document.getElementById("main-cards").style.display = "grid";
 }
 
 function openLogo() {
@@ -187,3 +203,4 @@ function animateParticles() {
 
 initParticles();
 animateParticles();
+
