@@ -98,7 +98,7 @@ header p {
 .card:hover {
   
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(99,102,241,0.6);
+  box-shadow: 0 0 25px rgba(141, 141, 235, 0.6);
 }
 
 }
@@ -114,11 +114,12 @@ header p {
 
 footer {
   text-align: center;
-  padding: 10px;
-  font-size: 0.85rem;
+  padding: 20px;
+  font-size: 0.9rem;
   color: #94a3b8;
+  margin-top: auto;
+  opacity: 0.8;
 }
-
 /* ================= PROJECT LIST ================= */
 
 .hidden {
@@ -139,22 +140,25 @@ footer {
 }
 
 .sub-card {
-  background: #1e293b;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 14px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: transform 0.2s, background 0.2s;
-  
-  backdrop-filter: blur(6px);
-  background: rgba(30, 41, 59, 0.9);
+  font-size: 0.95rem;
+  text-align: center;
 
+  /* invisible glass look */
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+  
+
+  transition: all 0.05s ease;
 }
 
 .sub-card:hover {
-  background: #334155;
-  transform: translateX(4px);
+    transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(141, 141, 235, 0.6);
 }
 
 .close-btn {
@@ -310,4 +314,12 @@ footer {
 }
 * {
   transition: all 0.3s ease;
+}
+
+body {
+  background: black;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
