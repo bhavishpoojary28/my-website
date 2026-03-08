@@ -204,3 +204,18 @@ function animateParticles() {
 initParticles();
 animateParticles();
 
+function openCertificates() {
+
+document.getElementById("portfolio-section").style.display = "none";
+
+document.getElementById("certificates-section").style.display = "block";
+
+}
+
+function closeCertificates() {
+
+document.getElementById("certificates-section").style.display = "none";
+
+document.getElementById("portfolio-section").style.display = "block";
+
+}
