@@ -20,6 +20,10 @@ const collegeProjects = [
    {
     name: "SweetDelights Cake Website",
     url: "https://bhavishpoojary28-sweetdelights-cake.vercel.app"
+  },
+  {
+    name: "WaveFlow",
+    url: "https://bhavishpoojary28.github.io/waveflow/"
   }
 
 ];
@@ -166,13 +170,19 @@ class Particle {
 
     // 🔹 DRAW ONLY NEAR CURSOR
     if (dist < mouse.radius) {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `hsl(${hue}, 100%, 60%)`;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = `hsl(${hue}, 100%, 60%)`;
-      ctx.fill();
-    }
+
+  ctx.beginPath();
+
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 10);
+
+  ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;   // brighter color
+
+ ctx.shadowBlur = 10;
+ctx.shadowColor = `hsl(${hue}, 100%, 70%)`;
+
+  ctx.fill();
+
+}
   }
 }
 
